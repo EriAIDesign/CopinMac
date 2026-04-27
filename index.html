@@ -1,128 +1,357 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Copin プライバシーポリシー / Privacy Policy</title>
+<title>CopinMac – Text Stock App for Mac</title>
 <style>
+  :root {
+    --bg: #faf7f2;
+    --text: #2b2b2b;
+    --muted: #666;
+    --accent: #ffb27c;
+    --accent-dark: #d9793f;
+    --card: #ffffff;
+    --border: rgba(0, 0, 0, 0.08);
+  }
+
   body {
-    font-family: -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif;
-    line-height: 1.7;
-    margin: 40px auto;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+  }
+
+  header {
+    background: var(--accent);
+    padding: 42px 20px 38px;
+    text-align: center;
+  }
+
+  header h1 {
+    margin: 0;
+    font-size: 2.2rem;
+    line-height: 1.25;
+  }
+
+  header p {
+    max-width: 680px;
+    margin: 12px auto 0;
+    font-size: 1.05rem;
+  }
+
+  main {
     max-width: 760px;
-    padding: 0 20px;
-    color: #333;
+    margin: 0 auto;
+    padding: 30px 20px 60px;
   }
-  h1 { font-size: 1.9rem; margin-bottom: 1rem; }
-  h2 { margin-top: 2rem; font-size: 1.3rem; border-left: 4px solid #6c8; padding-left: 8px; }
+
+  h2 {
+    margin-top: 42px;
+    font-size: 1.55rem;
+    line-height: 1.35;
+  }
+
+  p {
+    margin: 12px 0;
+  }
+
+  ul {
+    padding-left: 22px;
+  }
+
+  li {
+    margin: 6px 0;
+  }
+
+  a {
+    color: #0070c9;
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
   .lang-switch {
-    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 22px;
   }
+
   .lang-switch button {
-    padding: 6px 14px;
-    margin-right: 8px;
-    border: 1px solid #bbb;
-    background: #f7f7f7;
-    border-radius: 4px;
+    appearance: none;
+    border: 1px solid rgba(0, 0, 0, 0.18);
+    background: rgba(255, 255, 255, 0.72);
+    color: var(--text);
+    border-radius: 999px;
+    padding: 7px 14px;
+    font-size: 0.95rem;
     cursor: pointer;
   }
+
   .lang-switch button.active {
-    background: #6c8;
+    background: var(--text);
     color: #fff;
-    border-color: #6c8;
+    border-color: var(--text);
+  }
+
+  .hero-note {
+    background: rgba(255, 255, 255, 0.55);
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    border-radius: 18px;
+    padding: 18px 20px;
+    margin-top: 28px;
+  }
+
+  .section-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    padding: 20px;
+    margin-top: 24px;
+  }
+
+  .privacy-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .privacy-links a {
+    display: inline-block;
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    padding: 7px 13px;
+  }
+
+  footer {
+    margin-top: 60px;
+    padding: 20px;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #777;
+  }
+
+  [data-lang] {
+    display: none;
+  }
+
+  body.lang-en [data-lang="en"] {
+    display: block;
+  }
+
+  body.lang-ja [data-lang="ja"] {
+    display: block;
+  }
+
+  @media (max-width: 520px) {
+    header {
+      padding: 34px 18px 32px;
+    }
+
+    header h1 {
+      font-size: 1.85rem;
+    }
+
+    main {
+      padding: 24px 18px 52px;
+    }
   }
 </style>
-<script>
-  function switchLang(lang) {
-    document.getElementById("ja").style.display = lang === "ja" ? "block" : "none";
-    document.getElementById("en").style.display = lang === "en" ? "block" : "none";
-    document.getElementById("btn-ja").classList.toggle("active", lang === "ja");
-    document.getElementById("btn-en").classList.toggle("active", lang === "en");
-  }
-</script>
 </head>
-<body>
 
-<div class="lang-switch">
-  <button id="btn-ja" class="active" onclick="switchLang('ja')">日本語</button>
-  <button id="btn-en" onclick="switchLang('en')">English</button>
-</div>
+<body class="lang-en">
 
-<!-- ▼ 日本語版 -->
-<div id="ja">
-<h1>Copin プライバシーポリシー</h1>
-<p>最終更新日：2026年2月</p>
+<header>
+  <div data-lang="en">
+    <h1>CopinMac – Text Stock App for Mac</h1>
+    <p>Save copied text as cards, organize it by Box, and copy it again when you need it.</p>
+  </div>
 
-<p>本アプリ「Copin」は Takemiya Eri（以下「開発者」）が提供するアプリケーションです。ユーザーのプライバシーを尊重し、以下の通りプライバシーポリシーを定めます。</p>
+  <div data-lang="ja">
+    <h1>CopinMac – Mac用テキストストックアプリ</h1>
+    <p>コピーした文章をカードとしてためて、BOXごとに整理。必要な時にすぐコピーできます。</p>
+  </div>
 
-<h2>1. 収集する情報</h2>
-<ul>
-  <li>ユーザーが自らコピー・入力したテキスト（端末内のみ保存）</li>
-  <li>Apple が提供する匿名の診断データ（ユーザーが許可した場合のみ）</li>
-</ul>
-<p>開発者は氏名、住所、連絡先などの個人情報を収集しません。</p>
+  <div class="lang-switch" aria-label="Language switcher">
+    <button type="button" id="btn-en" class="active" onclick="setLanguage('en')">English</button>
+    <button type="button" id="btn-ja" onclick="setLanguage('ja')">日本語</button>
+  </div>
+</header>
 
-<h2>2. データの保存方法</h2>
-<p>すべてのデータはユーザーの端末内にのみ保存され、外部サーバへ送信されません。</p>
+<main>
 
-<h2>3. 第三者提供</h2>
-<p>Copin は以下の行為を行いません：</p>
-<ul>
-  <li>データの外部送信</li>
-  <li>広告ネットワーク等への情報提供</li>
-  <li>追跡目的のSDK利用</li>
-</ul>
+  <div data-lang="en">
+    <section class="hero-note">
+      <p>
+        CopinMac sits between a notes app and clipboard history.
+        It gives copied text a lightweight place to stay until you need it again.
+      </p>
+    </section>
 
-<h2>4. アプリ内課金</h2>
-<p>課金処理は Apple の StoreKit により管理され、クレジットカード情報などを開発者が取得することはありません。</p>
+    <h2>About CopinMac</h2>
+    <p>
+      CopinMac is a text stock app for Mac that lets you save copied text as cards.
+    </p>
+    <p>
+      Research notes, writing snippets, social post drafts, templates, and anything you may want to use later.
+      CopinMac helps you keep copied text in a lightweight, easy-to-reuse format.
+    </p>
+    <p>
+      Turn on Paste Mode to automatically capture copied text.
+      Captured text is saved as cards and can be organized by Box.
+    </p>
 
-<h2>5. ユーザーの権利</h2>
-<p>ユーザーはいつでもアプリ内のデータを削除できます。また、アプリをアンインストールすることで端末内のデータは完全に削除されます。</p>
+    <h2>Features</h2>
+    <ul>
+      <li>Save copied text as cards</li>
+      <li>Automatically capture copied text with Paste Mode</li>
+      <li>Organize cards by Box</li>
+      <li>Manage text blocks inside each card</li>
+      <li>Quickly copy the text you need</li>
+      <li>Import as plain text</li>
+      <li>JSON backup support</li>
+      <li>Unlock Box, card, and block limits with Copin Pro</li>
+    </ul>
 
-<h2>6. プライバシーポリシーの変更</h2>
-<p>本ポリシーは必要に応じて更新されます。重要な変更がある場合はアプリ内またはストアページで告知します。</p>
+    <h2>Why CopinMac?</h2>
+    <p>
+      A notes app can feel too heavy.<br>
+      Clipboard history can feel too temporary.
+    </p>
+    <p>
+      CopinMac is a simple place for copied text you may want to use again.
+    </p>
 
-<h2>7. お問い合わせ</h2>
-<p>メール：takepenco&#64;gmail&#46;com</p>
-</div>
+    <h2>Privacy</h2>
+    <p>
+      CopinMac stores your text on your Mac.
+      Your copied text is not sent to an external server.
+    </p>
 
-<!-- ▼ 英語版 -->
-<div id="en" style="display:none;">
-<h1>Copin Privacy Policy</h1>
-<p>Last Updated: February 2026</p>
+    <div class="section-card">
+      <h2>Privacy Policy</h2>
+      <p>View the privacy policy here:</p>
+      <div class="privacy-links">
+        <a href="https://eriaidesign.github.io/CopinMac/privacy.html" target="_blank" rel="noopener">Privacy Policy</a>
+      </div>
+    </div>
 
-<p>The application “Copin” is provided by Takemiya Eri (“the Developer”). We respect user privacy and outline our policy as follows.</p>
+    <h2>Contact</h2>
+    <p>
+      For inquiries, please contact:<br>
+      Email: takepenco&#64;gmail&#46;com
+    </p>
+  </div>
 
-<h2>1. Information We Collect</h2>
-<ul>
-  <li>Text copied or entered by the user (stored locally on the device only)</li>
-  <li>Anonymous diagnostic data provided by Apple (only if the user opts in)</li>
-</ul>
-<p>The Developer does not collect personal information such as name, address, or contact details.</p>
+  <div data-lang="ja">
+    <section class="hero-note">
+      <p>
+        CopinMacは、メモアプリほど重くなく、クリップボード履歴ほど一時的でもない。
+        コピーした文章を、あとで使いやすい形で残しておける場所です。
+      </p>
+    </section>
 
-<h2>2. Data Storage</h2>
-<p>All data is stored solely on the user's device and is never transmitted to external servers.</p>
+    <h2>CopinMacについて</h2>
+    <p>
+      CopinMacは、コピーした文章をカードとしてためておけるMac用のテキストストックアプリです。
+    </p>
+    <p>
+      調べもの、文章作成、SNS投稿、定型文、あとで使いたいメモ。
+      作業中にコピーしたテキストを、軽く残して、あとからすぐ使える形に整理できます。
+    </p>
+    <p>
+      コピペモードをONにすると、コピーした内容を自動で取り込みます。
+      取り込んだテキストはカードとして保存され、BOXごとに整理できます。
+    </p>
 
-<h2>3. Third-Party Sharing</h2>
-<p>Copin does NOT:</p>
-<ul>
-  <li>Send data externally</li>
-  <li>Share information with advertising networks</li>
-  <li>Use tracking or analytics SDKs</li>
-</ul>
+    <h2>主な機能</h2>
+    <ul>
+      <li>コピーしたテキストをカードとして保存</li>
+      <li>コピペモードでコピー内容を自動取り込み</li>
+      <li>BOXごとの整理</li>
+      <li>カード内のテキストブロック管理</li>
+      <li>必要なテキストをすぐコピー</li>
+      <li>プレーンテキストで取り込み</li>
+      <li>JSONバックアップ</li>
+      <li>Copin ProでBOX、カード、ブロック数の制限を解除</li>
+    </ul>
 
-<h2>4. In-App Purchases</h2>
-<p>All payments are handled securely by Apple’s StoreKit. The Developer does not receive any billing information.</p>
+    <h2>CopinMacの立ち位置</h2>
+    <p>
+      メモアプリは少し重い。<br>
+      クリップボード履歴は一時的すぎる。
+    </p>
+    <p>
+      CopinMacは、その間にある「コピーした文章の置き場」です。
+    </p>
 
-<h2>5. User Rights</h2>
-<p>Users may delete their data at any time within the app. Uninstalling the app will remove all data stored on the device.</p>
+    <h2>プライバシー</h2>
+    <p>
+      CopinMacは、取り込んだテキストをユーザーのMac内に保存します。
+      コピー内容を外部サーバーへ送信することはありません。
+    </p>
 
-<h2>6. Policy Changes</h2>
-<p>This policy may be updated as necessary. Significant changes will be announced within the app or on the store page.</p>
+    <div class="section-card">
+      <h2>プライバシーポリシー</h2>
+      <p>プライバシーポリシーはこちらから確認できます。</p>
+      <div class="privacy-links">
+        <a href="https://eriaidesign.github.io/CopinMac/privacy.html" target="_blank" rel="noopener">プライバシーポリシー</a>
+      </div>
+    </div>
 
-<h2>7. Contact</h2>
-<p>Email: takepenco&#64;gmail&#46;com</p>
-</div>
+    <h2>お問い合わせ</h2>
+    <p>
+      お問い合わせはこちらまでお願いします。<br>
+      Email:takepenco&#64;gmail&#46;com
+    </p>
+  </div>
+
+</main>
+
+<footer>
+  © 2026 Eri Takemiya. All rights reserved.
+</footer>
+
+<script>
+  function setLanguage(lang) {
+    document.body.className = lang === 'ja' ? 'lang-ja' : 'lang-en';
+    document.documentElement.lang = lang;
+
+    document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+    document.getElementById('btn-ja').classList.toggle('active', lang === 'ja');
+
+    try {
+      localStorage.setItem('copinmac-lang', lang);
+    } catch (e) {}
+  }
+
+  (function () {
+    let savedLang = null;
+
+    try {
+      savedLang = localStorage.getItem('copinmac-lang');
+    } catch (e) {}
+
+    if (savedLang === 'ja' || savedLang === 'en') {
+      setLanguage(savedLang);
+      return;
+    }
+
+    const browserLang = navigator.language || navigator.userLanguage || '';
+    if (browserLang.toLowerCase().startsWith('ja')) {
+      setLanguage('ja');
+    } else {
+      setLanguage('en');
+    }
+  })();
+</script>
 
 </body>
 </html>
