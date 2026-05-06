@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CopinMac – Text Stock App for Mac</title>
+<title>Copin Desktop – Text Stock App</title>
 <style>
   :root {
     --bg: #faf7f2;
@@ -170,12 +170,12 @@
 
 <header>
   <div data-lang="en">
-    <h1>CopinMac – Text Stock App for Mac</h1>
+    <h1>Copin Desktop – Text Stock App</h1>
     <p>Save copied text as cards, organize it by Box, and copy it again when you need it.</p>
   </div>
 
   <div data-lang="ja">
-    <h1>CopinMac – Mac用テキストストックアプリ</h1>
+    <h1>Copin Desktop – テキストストックアプリ</h1>
     <p>コピーした文章をカードとしてためて、BOXごとに整理。必要な時にすぐコピーできます。</p>
   </div>
 
@@ -190,18 +190,18 @@
   <div data-lang="en">
     <section class="hero-note">
       <p>
-        CopinMac sits between a notes app and clipboard history.
+        Copin Desktop sits between a notes app and clipboard history.
         It gives copied text a lightweight place to stay until you need it again.
       </p>
     </section>
 
-    <h2>About CopinMac</h2>
+    <h2>About Copin Desktop</h2>
     <p>
-      CopinMac is a text stock app for Mac that lets you save copied text as cards.
+      Copin Desktop is a text stock app that lets you save copied text as cards.
     </p>
     <p>
       Research notes, writing snippets, social post drafts, templates, and anything you may want to use later.
-      CopinMac helps you keep copied text in a lightweight, easy-to-reuse format.
+      Copin Desktop helps you keep copied text in a lightweight, easy-to-reuse format.
     </p>
     <p>
       Turn on Paste Mode to automatically capture copied text.
@@ -220,18 +220,18 @@
       <li>Unlock Box, card, and block limits with Copin Pro</li>
     </ul>
 
-    <h2>Why CopinMac?</h2>
+    <h2>Why Copin Desktop?</h2>
     <p>
       A notes app can feel too heavy.<br>
       Clipboard history can feel too temporary.
     </p>
     <p>
-      CopinMac is a simple place for copied text you may want to use again.
+      Copin Desktop is a simple place for copied text you may want to use again.
     </p>
 
     <h2>Privacy</h2>
     <p>
-      CopinMac stores your text on your Mac.
+      Copin stores your text locally on your device.
       Your copied text is not sent to an external server.
     </p>
 
@@ -239,7 +239,7 @@
       <h2>Privacy Policy</h2>
       <p>View the privacy policy here:</p>
       <div class="privacy-links">
-        <a href="https://eriaidesign.github.io/CopinMac/privacy.html" target="_blank" rel="noopener">Privacy Policy</a>
+        <a href="https://eriaidesign.github.io/CopinDesktop/privacy.html" target="_blank" rel="noopener">Privacy Policy</a>
       </div>
     </div>
 
@@ -253,14 +253,14 @@
   <div data-lang="ja">
     <section class="hero-note">
       <p>
-        CopinMacは、メモアプリほど重くなく、クリップボード履歴ほど一時的でもない。
+        Copin Desktopは、メモアプリほど重くなく、クリップボード履歴ほど一時的でもない。
         コピーした文章を、あとで使いやすい形で残しておける場所です。
       </p>
     </section>
 
-    <h2>CopinMacについて</h2>
+    <h2>Copin Desktopについて</h2>
     <p>
-      CopinMacは、コピーした文章をカードとしてためておけるMac用のテキストストックアプリです。
+      Copin Desktopは、コピーした文章をカードとしてためておけるテキストストックアプリです。
     </p>
     <p>
       調べもの、文章作成、SNS投稿、定型文、あとで使いたいメモ。
@@ -283,18 +283,18 @@
       <li>Copin ProでBOX、カード、ブロック数の制限を解除</li>
     </ul>
 
-    <h2>CopinMacの立ち位置</h2>
+    <h2>Copin Desktopの立ち位置</h2>
     <p>
       メモアプリは少し重い。<br>
       クリップボード履歴は一時的すぎる。
     </p>
     <p>
-      CopinMacは、その間にある「コピーした文章の置き場」です。
+      Copin Desktopは、その間にある「コピーした文章の置き場」です。
     </p>
 
     <h2>プライバシー</h2>
     <p>
-      CopinMacは、取り込んだテキストをユーザーのMac内に保存します。
+      Copinは、取り込んだテキストを端末内に保存します。
       コピー内容を外部サーバーへ送信することはありません。
     </p>
 
@@ -302,14 +302,14 @@
       <h2>プライバシーポリシー</h2>
       <p>プライバシーポリシーはこちらから確認できます。</p>
       <div class="privacy-links">
-        <a href="https://eriaidesign.github.io/CopinMac/privacy.html" target="_blank" rel="noopener">プライバシーポリシー</a>
+        <a href="https://eriaidesign.github.io/CopinDesktop/privacy.html" target="_blank" rel="noopener">プライバシーポリシー</a>
       </div>
     </div>
 
     <h2>お問い合わせ</h2>
     <p>
       お問い合わせはこちらまでお願いします。<br>
-      Email:takepenco&#64;gmail&#46;com
+      Email: takepenco&#64;gmail&#46;com
     </p>
   </div>
 
@@ -328,7 +328,7 @@
     document.getElementById('btn-ja').classList.toggle('active', lang === 'ja');
 
     try {
-      localStorage.setItem('copinmac-lang', lang);
+      localStorage.setItem('copin-lang', lang);
     } catch (e) {}
   }
 
@@ -336,7 +336,7 @@
     let savedLang = null;
 
     try {
-      savedLang = localStorage.getItem('copinmac-lang');
+      savedLang = localStorage.getItem('copin-lang');
     } catch (e) {}
 
     if (savedLang === 'ja' || savedLang === 'en') {
